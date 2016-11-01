@@ -1,6 +1,6 @@
 // Define defaults for each variable.
 
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -11,6 +11,8 @@ $spacing-unit:     30px !default;
 $text-color:       #111 !default;
 $background-color: #fdfdfd !default;
 $brand-color:      #2a7ae2 !default;
+
+$base-color:       #ff2e88 !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -30,7 +32,7 @@ $on-laptop:        800px !default;
 //   }
 // }
 @mixin media-query($device) {
-  @media screen and (max-width: $device) {
+  @media screen and (min-width: $device) {
     @content;
   }
 }
@@ -40,6 +42,7 @@ $on-laptop:        800px !default;
 
 // Import Hack
 @import "./hack/hack";
-@import "./hack/standard";
+
 // Import Manatee partials.
-// @import;
+@import "./manatee/_base";
+@import "./manatee/_layout";

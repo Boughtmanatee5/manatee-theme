@@ -24,4 +24,4 @@ github_username:  jekyllrb
 
 # Build settings
 markdown: kramdown
-hacktheme: standard
+hacktheme: hack
